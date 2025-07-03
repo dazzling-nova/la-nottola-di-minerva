@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Nottola di Minerva</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../../styles/general.css">
+    <link rel="stylesheet" href="../../styles/style.css">
+    <link rel="stylesheet" href="../../styles/queries.css">
+</head>
+
+<body>
+    <main class="article container">
+        <!-- populate using javascript -->
+    </main>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <script src="../../footer.js"></script>
+    <script src="../../header.js"></script>
+
+    <script>
+        const article = document.querySelector(".article");
+        const articleN = 5;
+        fetch("_articles.json")
+            .then((response) => response.json())
+            .then((json) => {
+                let articleObj = json.articles[articleN]
+                let author = articleObj.autore;
+                let text = articleObj.testo;
+                let title = articleObj.titolo;
+                let sources = articleObj.fonti;
+
+                article.innerHTML = ` <h2 class="heading-secondary">${title}</h2>
+                                        <div class="article-text">
+                                    ${text}
+                                    </div>
+                                    <div class="author">
+                                        <p><b>Autore</b>: ${author}</p>
+                                    </div>`
+            });
+
+    </script>
+</body>
+
+</html>
