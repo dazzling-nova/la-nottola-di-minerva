@@ -1,3 +1,8 @@
+// add header
+addHeader("../../index.html", "../about.html", "../numeri.html", "..");
+// add favicon
+addFavicon("../../images/favicon.png");
+
 const numberArticles = document.querySelector(".number-articles");
 
 // acquire articles from json file and populate the number's articles

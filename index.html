@@ -25,10 +25,15 @@
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
-    <script src="../footer.js"></script>
-    <script src="../header.js"></script>
+    <script src="footer.js"></script>
+    <script src="header.js"></script>
 
     <script>
+        // add header
+        addHeader("index.html", "pages/about.html", "pages/numeri.html", "pages")
+        // add favicon
+        addFavicon("images/favicon.png")
+
         const homeArticles = document.querySelector(".home-articles");
 
         // acquire articles from json file and populate the number's articles
@@ -49,6 +54,8 @@
                 </a>`;
                 });
             });
+
+
 
     </script>
 </body>

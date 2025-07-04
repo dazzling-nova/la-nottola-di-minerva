@@ -27,6 +27,11 @@
     <script src="../../header.js"></script>
 
     <script>
+        // add header
+        addHeader("../../index.html", "../about.html", "../numeri.html", "..");
+        // add favicon
+        addFavicon("../../images/favicon.png");
+
         const article = document.querySelector(".article");
         const articleN = 2;
         fetch("_articles.json")
