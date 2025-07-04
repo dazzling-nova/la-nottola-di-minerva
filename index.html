@@ -37,7 +37,6 @@
         const homeArticles = document.querySelector(".home-articles");
 
         // acquire articles from json file and populate the number's articles
-
         fetch(`pages/number${currentNumber}/_articles.json`)
             .then((response) => response.json())
             .then((json) => {
@@ -49,14 +48,14 @@
                     homeArticles.innerHTML += `<a href="pages/number${currentNumber}/${title}.html">
                     <article class="article-card">
                         <p class="article-title">${title}</p>   
-                        <p class="article-card-text">${text.substring(0, 200).replace("<p>", "").replace("</p>", "")}...</p>
+                        <p class="article-card-text">${text.substring(0, 200).replace("<p>", "").replace("</p>", "").replace("<p>", "")}...</p>
                     </article>
                 </a>`;
+
+                    console.log(text.substring(0, 200).replace("<p>", "").replace("</p>", "").replace("<p>", ""));
+
                 });
             });
-
-
-
     </script>
 </body>
 

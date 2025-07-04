@@ -57,11 +57,19 @@ Medium: 11px
 
 */
 
+:root {
+  --bgcolor: black;
+  --textcolor: white;
+  --color1: blueviolet;
+  --color2: brown;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   text-decoration: none;
+  transition: all 300ms;
 }
 
 html {
@@ -70,13 +78,15 @@ html {
 }
 
 body {
-  color: white;
-  background: #000;
+  color: var(--textcolor);
+  background: var(--bgcolor);
   font-family: "Nunito Sans", sans-serif;
   text-align: center;
   display: flex;
   align-items: center;
   flex-direction: column;
+  /* background-image: linear-gradient(rgb(0 0 255 / 0.5), rgb(255 255 0 / 0.5)); */
+  /* url("../images/home-bg.jpg"); */
 }
 
 .container {
@@ -91,13 +101,14 @@ body {
 .heading-tertiary {
   font-weight: 700;
   letter-spacing: -0.5px;
-  color: #e7f4f9;
+  color: var(--textcolor);
   font-family: "DM Serif Display", serif;
 }
 
 .heading-primary {
   font-size: 8rem;
   line-height: 1.05;
+  color: var(--color2);
 }
 
 .heading-secondary {

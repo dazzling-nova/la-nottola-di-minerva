@@ -1,4 +1,4 @@
-const currentNumber = 0;
+const currentNumber = 2;
 // insert header at the top of every page where the script is called
 function addHeader(indexPath, aboutPath, numbersPath, numberPath) {
   document.querySelector("body").innerHTML =

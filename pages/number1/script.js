@@ -21,7 +21,8 @@ fetch("_articles.json")
                 <p class="article-card-text">${text
                   .substring(0, 200)
                   .replace("<p>", "")
-                  .replace("</p>", "")}...</p>
+                  .replace("</p>", "")
+                  .replace("<p>", "")}...</p>
             </article>
         </a>`;
     });
